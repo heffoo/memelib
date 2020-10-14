@@ -1,18 +1,18 @@
 const MEMES_INFO = [
   {
-    id: "/LOL",
+    id: "LOL",
     name: "LOL",
     img: "/images/lol.jpg",
     info:
       " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quibusdam ullam aperiam delectus? Enim magni sit cumque nobis incidunt est?",
   },
   {
-    id: "/PF",
+    id: "PF",
     name: "Pokerface",
     img: "/images/lol.jpg",
   },
   {
-    id: "/TF",
+    id: "TF",
     name: "Trollface",
     img: "/images/lol.jpg",
   },

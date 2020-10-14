@@ -10,7 +10,7 @@ export default function MemeList({ memes }) {
       {memes.map((meme) => (
         <div key={meme.name + meme.id}>
           <li key={meme.id} className="meme-item">
-            <Link to={{ pathname: meme.id}}>
+            <Link to={`/${meme.id}`}>
               <img className="memeimg" src={meme.img} alt={meme.id}></img>
               <p>{meme.name}</p>
             </Link>

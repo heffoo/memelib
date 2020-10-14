@@ -7,6 +7,7 @@ import "./container.scss";
 
 const Container = ({ memes }) => {
   //   const [isLike, setLike] = useState(false);
+
   return (
     <div className="container">
       <div className="content"></div>
@@ -15,14 +16,14 @@ const Container = ({ memes }) => {
         <Route exact path="/">
           <MemeList memes={memes} />
         </Route>
-
         <Route
-          path="/:memeid"
-          render={(...memes) => (
-            // {console.log(memes)}
-            <MemeInfo {...memes} />
-          )}
-        ></Route>
+          path="catalog/phones/iphones/:memeId"
+          component={(memes) => {  console.log(memes)
+           return (<MemeInfo memeid={memes.match.params.memeId} />)  }
+          
+          }>
+
+        </Route>
       </Switch>
     </div>
   );
