@@ -1,0 +1,22 @@
+.container {
+    width: 650px;
+    height: 470px;  
+    border: 1px solid black;
+    padding: 10px;
+}
+.list {
+    display: flex;
+}
+.meme-item {
+    padding: 15px 25px 0 25px;
+    &:hover {
+        box-shadow: 0 0 7px 4px lightgray;
+    }
+    & p {
+        margin: 0;
+    }
+}
+.memeimg {
+    width: 60px;
+    height: 60px;
+}
