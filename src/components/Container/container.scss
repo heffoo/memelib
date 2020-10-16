@@ -6,11 +6,16 @@
 }
 .list {
     display: flex;
+    flex-wrap: wrap;
 }
 .meme-item {
-    padding: 15px 25px 0 25px;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    padding: 15px 20px 0 20px;
     &:hover {
         box-shadow: 0 0 7px 4px lightgray;
+        transition: all 0.2s;
     }
     & p {
         margin: 0;

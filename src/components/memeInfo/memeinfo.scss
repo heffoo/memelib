@@ -1,6 +1,43 @@
 .show-meme-inormation {
-    height: 400px;
-    width: 400px;
-    position: absolute;
+    width: 650px;
+    height: 470px;  
+    display: flex;
     border: 1px solid black;
+    position: relative;
+}
+.img-info {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.textInfo {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    line-height: 1.7;
+    & p {
+        margin: 0;
+        
+    }
+}
+.liked {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  font-size: 26px;
+   &:hover {
+        color: turquoise;
+    
+   }
+}
+.notLiked {
+    width: 40px;
+    height: 40px;
 }

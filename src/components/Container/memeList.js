@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./container.scss";
 
-export default function MemeList({ memes }) {
+export default function MemeList({ memes}) {
   return (
     <div className="list">
       {memes.map((meme) => (

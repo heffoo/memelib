@@ -1,11 +1,11 @@
 import React from "react";
 import MemeInfo from "../memeInfo/memeinfo";
 import MemeList from "../Container/memeList";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import "./container.scss";
 
-const Container = ({ memes }) => {
+const Container = ({ memes, setFavorite, memesfavs }) => {
   //   const [isLike, setLike] = useState(false);
 
   return (
@@ -16,14 +16,15 @@ const Container = ({ memes }) => {
         <Route exact path="/">
           <MemeList memes={memes} />
         </Route>
-        <Route
-          path="catalog/phones/iphones/:memeId"
-          component={(memes) => {  console.log(memes)
-           return (<MemeInfo memeid={memes.match.params.memeId} />)  }
-          
-          }>
-
+        <Route exact path="/favmemes">
+          <MemeList memes={memesfavs} />
         </Route>
+        <Route
+          path="/:memeid"
+          component={(props) => {
+            return <MemeInfo memeid={props.match.params.memeid} memes={memes} setFavorite={setFavorite} />;
+          }}
+        ></Route>
       </Switch>
     </div>
   );
