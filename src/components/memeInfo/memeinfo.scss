@@ -41,3 +41,15 @@
     width: 40px;
     height: 40px;
 }
+.arrow1 {
+position: absolute;
+right: 100px;
+bottom: 30px;
+font-size: 26px;
+text-decoration: none;
+color: black;
+}
+.arrow2 {
+    @extend .arrow1;
+    right: 46px;
+}

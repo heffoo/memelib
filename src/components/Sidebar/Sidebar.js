@@ -1,25 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Sidebar.scss";
 
-const Sidebar = ( ) => {
+const Sidebar = () => {
   // const showFavorite = () => {
   //     if (isLiked === true) {
   //       const favoriteMemes = memes.filter((meme) => meme.liked);
   //     }
   // }
 
-
   return (
     <div className="sidebar">
       <div className="sidelist">
-        <Link to="/">
-          <button className="sidebtn">all memes</button>
-        </Link>
-        <Link to="/favmemes">
-          <button className="sidebtn"  >favorite memes</button>
-        </Link>
+      <button className="sidebtn"> <NavLink className="navlink" exact to="/"  activeClassName="active">
+          all memes
+        </NavLink></button> 
+        <button className="sidebtn">  <NavLink className="navlink" to="/favmemes"  activeClassName="active">
+          favorite memes
+        </NavLink></button>  
       </div>
     </div>
   );
