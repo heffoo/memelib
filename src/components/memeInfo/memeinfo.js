@@ -8,15 +8,13 @@ export default function MemeInfo({ memeid, memes, setFavorite }) {
   const meme = memes.find((item, index) => {
     if (item.id === memeid) {
       memeIndex = index;
-   
-    return true; } 
+
+      return true;
+    }
+
+    console.log("memeIndex", index);
   });
 
-  // const showFavorite = () => {
-  //   const favmemes = memes.filter((meme) => meme.isLiked===true)
-  //         console.log(favmemes)
-  //   }
-  console.log(meme.isLiked);
   return (
     <div className="memeinfo">
       <div className="show-meme-inormation">
@@ -34,10 +32,10 @@ export default function MemeInfo({ memeid, memes, setFavorite }) {
           <br />
         </div>
         <img src={meme.img} alt="img " className="img-info" />{" "}
-        <Link className="arrow1" to={`/${memes[memeIndex - 1].id}`}>
+        <Link className="arrow1" to={`/${memeIndex === 0 ? memes[memes.length - 1].id : memes[memeIndex - 1].id}`}>
           ←
-        </Link>
-        <Link className="arrow2" to={`/${memes[memeIndex + 1].id}`}>
+        </Link> {console.log(memes.length)}
+        <Link className="arrow2" to={`/${memeIndex === memes.length - 1 ? memes[0].id : memes[memeIndex + 1].id}`}>
           →
         </Link>
       </div>
