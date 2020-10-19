@@ -12,7 +12,6 @@ export default function MemeInfo({ memeid, memes, setFavorite }) {
       return true;
     }
 
-    console.log("memeIndex", index);
   });
 
   return (
@@ -28,13 +27,14 @@ export default function MemeInfo({ memeid, memes, setFavorite }) {
           </button>
           <p>Название мема: {meme.name} </p> <br />
           <p>Год появления: {meme.year} </p> <br />
+
           <p>Биография: {meme.info} </p>
           <br />
         </div>
         <img src={meme.img} alt="img " className="img-info" />{" "}
         <Link className="arrow1" to={`/${memeIndex === 0 ? memes[memes.length - 1].id : memes[memeIndex - 1].id}`}>
           ←
-        </Link> {console.log(memes.length)}
+        </Link> 
         <Link className="arrow2" to={`/${memeIndex === memes.length - 1 ? memes[0].id : memes[memeIndex + 1].id}`}>
           →
         </Link>

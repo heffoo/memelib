@@ -4,24 +4,29 @@
   padding: 10px;
   border: 1px solid black;
 }
+
 .sidebtn {
   width: 100%;
   height: 40px;
   cursor: pointer;
+  
   font: {
     size: 18px;
   }
   background-color: transparent;
   outline: 0;
   border: {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 1px solid black;
-  };
-&:nth-child(2) {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 1px solid black;
+  }
+  &:nth-child(2) {
     border: 0;
-}
+  }
+  &:nth-child(3) {
+
+  }
   &::after {
     content: "";
     display: block;
@@ -43,6 +48,4 @@
 }
 .active {
   color: rgb(238, 130, 130);
-
-  
 }

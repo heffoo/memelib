@@ -8,6 +8,8 @@ import "./App.scss";
 function App() {
   const [memes, setMemes] = useState(JSON.parse(localStorage.getItem('data'))|| MEMES_INFO);
   const [favmemes, setFavMemes] = useState((JSON.parse(localStorage.getItem('data'))||[]).filter((item) => item.isLiked));
+  const [randmeme, setRandMeme] = useState(null);
+
 
   const setFavorite = (meme) => {
     let memefavs = [];
@@ -40,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <div className="forms-position">
-        <Sidebar />
+        <Sidebar memes={memes} randmeme={randmeme} setRandMeme={setRandMeme}/>
         <Container memesfavs={favmemes} memes={memes} setFavorite={setFavorite} />
       </div>
     </div>

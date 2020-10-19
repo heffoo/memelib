@@ -21,9 +21,14 @@
     line-height: 1.7;
     & p {
         margin: 0;
-        
     }
+    overflow: auto;
+    
 }
+::-webkit-scrollbar {
+    width: 0;
+}
+
 .liked {
   position: absolute;
   right: 20px;
