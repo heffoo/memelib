@@ -6,22 +6,20 @@ import Container from "./components/Container/container";
 import "./App.scss";
 
 function App() {
-  const [memes, setMemes] = useState(JSON.parse(localStorage.getItem("data")) || []);
-  const [favmemes, setFavMemes] = useState(
-    (JSON.parse(localStorage.getItem("data")) || []).filter((item) => item.isLiked)
+  const [memes, setMemes] = useState(JSON.parse(localStorage.getItem('data'))
   );
+  const [favmemes, setFavMemes] = useState((JSON.parse(localStorage.getItem('data'))||[]).filter((item) => item.isLiked));
   const [randmeme, setRandMeme] = useState(null);
 
   const setFavorite = (meme) => {
-    let memefavs = [];
-    let handler = memes;
-    handler = handler.map((item) => {
+    let handler = [...memes]
+    handler = memes.map((item) => {
       if (item.id === meme.id) {
         item = { ...item, isLiked: !item.isLiked };
       }
       return item;
     });
-    memefavs = handler.filter((item) => item.isLiked);
+    const memefavs = handler.filter((item) => item.isLiked);
 
     setMemes(handler);
     setFavMemes(memefavs);
@@ -33,15 +31,13 @@ function App() {
 
   function getMemes() {
     fetch("https://api.imgflip.com/get_memes")
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((res) => {
-        const fetchedMemes = res.data.memes.map((el) => (el = { ...el, isLiked: false, year: Math.random(1000) }));
+        const fetchedMemes = res.data.memes.map((el) => (el = { ...el, isLiked: false }));
         // let item =res.data.memes.find((item)=>item.id==='1')
         // item.
         fetchedMemes.forEach((el) => console.log(el.url));
-        if (memes.length === 0) {
+        if (!memes.length) {
           setMemes([...fetchedMemes,...MEMES_INFO]);
         }
       })

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+
 
 import "./memeinfo.scss";
 
@@ -11,18 +12,14 @@ export default function MemeInfo({ memeid, memes, setFavorite }) {
 
       return true;
     }
-  });
 
+  })
   return (
     <div className="memeinfo">
       <div className="show-meme-inormation">
         <div className="textInfo">
           <button className="liked" onClick={() => setFavorite(meme)}>
-            {!meme.isLiked ? (
-              <img className="notLiked" alt="like" src="images/star.png" />
-            ) : (
-              <img className="notLiked" alt="like" src="images/starliked.png" />
-            )}
+            <img className="notLiked" alt="like" src={!meme.isLiked ? "images/star.png" : "images/starliked.png"} />
           </button>
           <p>Название мема: {meme.name} </p> <br />
           <p>Год появления: {meme.year} </p> <br />

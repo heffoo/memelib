@@ -8,14 +8,12 @@ export default function MemeList({ memes }) {
   return (
     <div className="list">
       {memes.map((meme) => (
-        <div key={meme.name}>
           <li key={meme.id} className="meme-item">
             <Link className="tomeme-link" to={`/${meme.id}`}>
-              <img className="memeimg" src={meme.url} alt={meme.id}></img>
+              <img className="memeimg" src={meme.url} alt={meme.name}></img>
               <p >{meme.name}</p>
             </Link>
           </li>
-        </div>
       ))}
     </div>
   );
