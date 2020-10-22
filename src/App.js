@@ -22,7 +22,7 @@ function App() {
     });
     memefavs = handler.filter((item) => item.isLiked);
 
- 
+   
 
     setMemes(handler);
     setFavMemes(memefavs);
