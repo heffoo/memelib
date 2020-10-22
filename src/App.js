@@ -22,8 +22,7 @@ function App() {
     });
     memefavs = handler.filter((item) => item.isLiked);
 
-    console.log(2222, handler);
-    console.log(1221, memefavs);
+ 
 
     setMemes(handler);
     setFavMemes(memefavs);
