@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/memelib/static/css/main.abe66bad.chunk.css",
+    "main.js": "/memelib/static/js/main.eeef7dd3.chunk.js",
+    "main.js.map": "/memelib/static/js/main.eeef7dd3.chunk.js.map",
+    "runtime-main.js": "/memelib/static/js/runtime-main.7d4d8507.js",
+    "runtime-main.js.map": "/memelib/static/js/runtime-main.7d4d8507.js.map",
+    "static/js/2.be53dd8c.chunk.js": "/memelib/static/js/2.be53dd8c.chunk.js",
+    "static/js/2.be53dd8c.chunk.js.map": "/memelib/static/js/2.be53dd8c.chunk.js.map",
+    "index.html": "/memelib/index.html",
+    "precache-manifest.2b23b4bf2279dcae874c0cb0cfbb4c06.js": "/memelib/precache-manifest.2b23b4bf2279dcae874c0cb0cfbb4c06.js",
+    "service-worker.js": "/memelib/service-worker.js",
+    "static/css/main.abe66bad.chunk.css.map": "/memelib/static/css/main.abe66bad.chunk.css.map",
+    "static/js/2.be53dd8c.chunk.js.LICENSE.txt": "/memelib/static/js/2.be53dd8c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d4d8507.js",
+    "static/js/2.be53dd8c.chunk.js",
+    "static/css/main.abe66bad.chunk.css",
+    "static/js/main.eeef7dd3.chunk.js"
+  ]
+}
